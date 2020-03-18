@@ -15,6 +15,12 @@ export default class Login extends Component<{}> {
                 <TextInput
                     placeholder="First name"
                     style={Formstyles.TextInput}
+                // onChangeText=
+                // // "onChangeText"
+                // {text => onChangeText(text)}
+                // value=
+                // // "value"
+                // {value}
                 />
                 <TextInput
                     placeholder="Last name"
@@ -30,11 +36,13 @@ export default class Login extends Component<{}> {
                     secureTextEntry
                     placeholder="Password"
                     style={Formstyles.TextInput}
+                    textContentType="newPassword"
                 />
                 <TextInput
                     secureTextEntry
                     placeholder="Confirm Password"
                     style={Formstyles.TextInput}
+                
                 />
                 <Form type="Signup"/>
                 <View style={styles.signupTextCont}>

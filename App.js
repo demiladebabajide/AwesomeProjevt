@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, StatusBar } from 'react-native';
 
-import Login from "./src/pages/Login";
-import Signup from "./src/pages/Signup";
+import Routes from "./src/Routes";
 
 export default class App extends Component<{}> {
     render(){
@@ -10,6 +9,7 @@ export default class App extends Component<{}> {
             <View style = { styles.container }>
                 <Text style={{color: '#ffffff', fontSize: 18}}> Hello, World! </Text>  
                 <StatusBar backgroundColor="#0081cb" barStyle="light-content" />
+                <Routes />
             </View>
         );
     }
