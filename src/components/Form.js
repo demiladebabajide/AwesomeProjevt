@@ -59,7 +59,7 @@ const Formstyles = StyleSheet.create({
     },
     buttonText: {
         fontSize: 18,
-        fontWeight: 500,
+        fontWeight: "500",
         color: '#b3e5fc'
     }
 });

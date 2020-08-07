@@ -1,10 +1,16 @@
 import React, {Component} from 'react';
-import { StyleSheet, Text, TextInput, View, StatusBar } from 'react-native';
+import { StyleSheet, Text, TextInput, View, StatusBar, TouchableOpacity } from 'react-native';
+import {Actions} from 'react-native-router-flux';
+
 
 import Logo from "../components/Logo";
 import Form from "../components/Form";
 
 export default class Login extends Component<{}> {
+
+    signup() {
+        Actions.register()
+    }
     render() {
         return ( 
             <View style = { styles.container }>
@@ -31,7 +37,9 @@ export default class Login extends Component<{}> {
                 
                 <View style={styles.signupTextCont}>
                     <Text> Don't have an account yet?</Text>
+                    <TouchableOpacity onPress={this.signup}>
                     <Text style={styles.signupText}> Signup</Text>
+                    </TouchableOpacity>
                 </View>
                 </View>
                 <Logo />
@@ -43,13 +51,13 @@ export default class Login extends Component<{}> {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#b3e5fc',
+        backgroundColor: '#d6f2ff',
         alignItems: 'center',
         justifyContent: 'center',
     },
     signupText: {
         color: '#003f79',
-        fontWeight: 500,
+        fontWeight: "500",
         fontSize: 15,
         alignItems: 'center',
     },
@@ -85,7 +93,7 @@ const Formstyles = StyleSheet.create({
     },
     buttonText: {
         fontSize: 18,
-        fontWeight: 500,
+        fontWeight: "500",
         color: '#b3e5fc'
     }
 });

@@ -8,12 +8,12 @@ export default class Routes extends Component<{}> {
     render() {
         return (
             <Router>
-                <Stack key="root">
-                    <Scene key="login" component={Login} title="Login" />
-                    <Scene key="register" component={Login} title="Register" />
-                    {/* <Scene key="home" component={Login} title="Home" /> */}
-                </Stack>
-            </Router>
+            <Stack key="root" hideNavBar={true}>
+              <Scene key="login" component={Login} title="Login" initial={true}/>
+              <Scene key="register" component={Signup} title="Register" />
+              {/* <Scene key="home" component={Home} /> */}
+            </Stack>
+          </Router>
         )
     }
 }
